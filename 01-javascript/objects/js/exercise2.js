@@ -13,3 +13,14 @@ var library = [
   {title: "KJV Bible", author: "God", alreadyRead: false},
   {title: "Captain Underpants", author: "Some Jerk", alreadyRead: false}
 ];
+
+for (var i = 0; i < library.length; i++) {
+  var book = library[i];
+  var description = book.title + ' by ' + book.author;
+
+  if (book.alreadyRead) {
+    console.log("You already read " + description);
+  } else {
+    console.log("You still need to read " + description);
+  }
+}
