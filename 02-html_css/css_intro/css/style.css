@@ -1,0 +1,26 @@
+body {
+  background-color: pink;
+  font-size: 150%; /* px, pt, em */
+  color: #333333;
+  /*font-style: italic;*/
+  font-family: Arial; /* Web fonts */
+}
+
+p {
+  line-height: 0.5;
+  letter-spacing: 2px;
+  text-align: center;
+  /*text-decoration: line-through;*/
+}
+
+a {
+  color: white;
+}
+
+a:visited {
+  color: grey;
+}
+
+a:hover {
+  background-color: red;
+}
