@@ -36,10 +36,8 @@ main {
 }
 
 main img {
-  /*display: block;
-  margin: 0 auto;*/
-  float: left;
-  margin-right: 1em;
+  display: block;
+  margin: 0 auto;
 }
 
 aside {
