@@ -1,0 +1,25 @@
+.demo {
+  border: 1px solid pink;
+}
+
+.block {
+  display: block; /* This is the default for divs */
+}
+
+.inline {
+  display: inline;
+}
+
+.none {
+  display: none;
+}
+
+.invisible {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden; /* This still occupies space on the screen */
+}
+
+/* Inline block */
