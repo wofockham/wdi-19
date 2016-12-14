@@ -1,0 +1,58 @@
+body {
+  min-height: 9999em;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 150px; /* Hacky way to do vertical centering */
+}
+
+.static {
+  position: static; /* This is the default */
+}
+
+.absolute {
+  position: absolute; /* Relative to the document */
+  top: 300px;
+  right: 200px;
+}
+
+.fixed {
+  position: fixed; /* Absolutely positioned RELATIVE TO THE WINDOW */
+  top: 50px;
+  right: 200px;
+}
+
+.relative {
+  position: relative;
+  width: 900px;
+  height: 900px;
+  line-height: 900px;
+}
+
+.small-box {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+}
+
+.red {
+  background-color: red;
+  top: 275px;
+  right: 175px;
+}
+
+.green {
+  background-color: green;
+  top: 300px;
+  right: 200px;
+}
+
+.blue {
+  background-color: blue;
+  top: 325px;
+  right: 225px;
+}
