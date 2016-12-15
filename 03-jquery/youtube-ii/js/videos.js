@@ -1,13 +1,13 @@
-var links = document.querySelectorAll('ul a');
+var links = $('ul a');
 
 for (var i = 0; i < links.length; i++) {
-  var l = links[i]; // Retrieve the current link.
+  var $l = links.eq(i); // Retrieve the jQuery version of the current link.
 
-  var href = l.getAttribute('href'); // The same as l.href;
+  var href = $l.attr('href'); // Using .attr() as a getter.
 
   var thumbnailURL = youtube.generateThumbnailUrl( href );
-  var img = document.createElement('img'); // This creates <img> as a detached DOM node
-  img.setAttribute('src', thumbnailURL); // Equivalent to img.src = thumbnailURL;
+  var $img = $('<img>');
+  $img.attr('src', thumbnailURL); // Using .attr() as a setter.
 
-  l.appendChild( img ); // This attaches the img to our DOM.
+  $l.append($img);
 }
