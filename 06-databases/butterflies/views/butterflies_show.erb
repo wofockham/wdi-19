@@ -4,3 +4,8 @@
 <% unless @butterfly['image'].nil? %>
   <img class="feature" src="<%= @butterfly['image'] %>" alt="">
 <% end %>
+
+<div class="controls">
+  <a href="/butterflies/<%= @butterfly['id'] %>/delete">Delete</a>
+  <a href="/butterflies/<%= @butterfly['id'] %>/edit">Edit</a>
+</div>

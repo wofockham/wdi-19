@@ -28,8 +28,27 @@ get '/butterflies/:id' do
   @butterfly = query_db "SELECT * FROM butterflies WHERE id = #{ params[:id] }"
   @butterfly = @butterfly.first # Pluck the sole butterfly from the array
 
-  # Show some HTML
   erb :butterflies_show
+end
+
+# EDIT
+get '/butterflies/:id/edit' do
+  @butterfly = query_db "SELECT * FROM butterflies WHERE id = #{ params[:id] }"
+  @butterfly = @butterfly.first
+
+  erb :butterflies_edit
+end
+
+# UPDATE
+post '/butterflies/:id' do
+  query_db "UPDATE butterflies SET name='#{ params[:name] }', family='#{ params[:family] }', image='#{ params[:image] }' WHERE id=#{ params[:id] }"
+  redirect to('/butterflies')
+end
+
+# DESTROY
+get '/butterflies/:id/delete' do
+  query_db "DELETE FROM butterflies WHERE id = #{ params[:id] }"
+  redirect to('/butterflies')
 end
 
 def query_db(sql)
