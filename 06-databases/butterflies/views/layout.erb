@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>The Wonderful World of Butterflies</title>
+  <link rel="stylesheet" href="/css/butterflies.css">
 </head>
 <body>
 
-  <nav>
-    <a href="/">Home</a>
-    <a href="/butterflies">All butterflies</a>
-  </nav>
-
-  <%= yield %>
+  <div class="container">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/butterflies">All butterflies</a>
+    </nav>
+    <%= yield %>
+  </div>
 
 </body>
 </html>
