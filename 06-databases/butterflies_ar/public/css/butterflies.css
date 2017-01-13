@@ -25,3 +25,9 @@ img.feature {
   border-radius: 0.5em;
   max-width: 100%;
 }
+
+img.thumb {
+  display: block;
+  border-radius: 0.5em;
+  width: 10em;
+}
