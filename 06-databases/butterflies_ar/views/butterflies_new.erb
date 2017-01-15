@@ -4,5 +4,11 @@
   <input type="text" name="name" placeholder="Butterfly name">
   <input type="text" name="family" placeholder="Butterfly family">
   <input type="url" name="image" placeholder="http://...">
+  <select name="plant_id">
+    <option></option>
+    <% Plant.all.each do |plant| %>
+      <option value="<%= plant.id %>"><%= plant.name %></option>
+    <% end %>
+  </select>
   <button>Create Butterfly</button>
 </form>
