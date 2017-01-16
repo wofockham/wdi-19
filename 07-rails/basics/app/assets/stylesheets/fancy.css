@@ -1,0 +1,9 @@
+img {
+  display: block;
+  margin: auto;
+  border-radius: 100%;
+}
+
+html {
+  background-color: pink;
+}
