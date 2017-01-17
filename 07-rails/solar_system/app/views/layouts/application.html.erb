@@ -8,12 +8,16 @@
 </head>
 <body>
 
-<nav>
-  <%= link_to "Home", root_path %>
-  <%= link_to "New planet", planets_new_path %>
-</nav>
+<div class="container">
 
-<%= yield %>
+  <nav>
+    <%= link_to "Home", root_path %>
+    <%= link_to "New planet", planets_new_path %>
+  </nav>
+
+  <%= yield %>
+
+</div>
 
 </body>
 </html>

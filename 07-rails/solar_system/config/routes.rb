@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   get '/planets/new' => 'planets#new'
   post '/planets' => 'planets#create'
   get '/planets/:id' => 'planets#show', :as => 'planet'
+  get '/planets/:id/edit' => 'planets#edit', :as => 'planet_edit'
+  post '/planets/:id' => 'planets#update'
   post '/planets/:id/delete' => 'planets#destroy', :as => 'planet_delete'
 end

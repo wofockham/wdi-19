@@ -8,5 +8,6 @@
 <p>Moons: <%= @planet.moons %></p>
 
 <div class="controls">
+  <%= link_to "Edit planet", planet_edit_path(@planet.id) %>
   <%= button_to "Delete planet", planet_delete_path(@planet.id), :method => 'post' %>
 </div>
