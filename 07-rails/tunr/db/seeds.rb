@@ -42,7 +42,7 @@ s3.genres << g1
 
 m1.songs << s1 << s2 << s3 << s1
 m2.songs << s3 << s3 << s3
-m3.songs << s2 << s1
+m3.songs = [s2, s1]
 
 u1.mixtapes << m1 << m2
 u2.mixtapes << m3
