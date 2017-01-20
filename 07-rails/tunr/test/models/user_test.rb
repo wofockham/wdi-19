@@ -7,6 +7,8 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  password_digest :string
+#  avatar          :text
+#  admin           :boolean          default("false")
 #
 
 require 'test_helper'
