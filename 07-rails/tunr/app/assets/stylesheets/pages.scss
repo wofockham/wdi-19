@@ -10,3 +10,17 @@
 .homeicon:hover {
   text-shadow: 0 0 5px green;
 }
+
+body.pages.home {
+  background-color: pink;
+}
+
+body.session.new {
+  background: url(http://fillmurray.com/600/700);
+  background-size: cover;
+  background-position: center;
+}
+
+// body.session.new h1 {
+//   background-color: grey;
+// }

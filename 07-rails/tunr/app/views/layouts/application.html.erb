@@ -7,13 +7,12 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body class="<%= params[:controller] %> <%= params[:action] %>">
 
 <div class="container">
 
   <nav>
-    <span class="glyphicon glyphicon-home homeicon"></span>
-    <%= link_to "Home", root_path %>
+    <%= link_to "<span class='glyphicon glyphicon-home homeicon'></span> Home".html_safe, root_path %>
     <% if @current_user.present? %>
       <% if @current_user.admin? %>
         <%= link_to "All users", users_path %>
