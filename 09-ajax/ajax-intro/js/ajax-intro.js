@@ -1,15 +1,16 @@
 var xhr = new XMLHttpRequest(); // Like HTTParty for JS
 
-// To process the results of an asynchronous function like xhr.send()
-// we MUST use a callback to wait for the request to complete.
+// To process the results of an asynchronous function like xhr.send() we MUST
+// use a callback to wait for the request to complete.
 xhr.onreadystatechange = function () {
   // If the request is still in progress, do nothing.
   if (xhr.readyState < 4) { return; }
 
-  var movieInfo = xhr.responseText;
-  console.log(movieInfo);
+  var movieInfo = JSON.parse(xhr.responseText);
+  console.log('here is the movie info', movieInfo);
+
   var poster = movieInfo['Poster'];
-  console.log(poster);
+  console.log('here is the poster', poster);
 };
 
 xhr.open('GET', 'http://omdbapi.com/?t=jaws'); // Set up
