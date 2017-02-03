@@ -10,15 +10,17 @@
 </head>
 <body>
 
+  <a href="#">Home</a>
+
   <h1>My Backbone Blog</h1>
 
   <div id="main"></div>
 
-  <div id="postTemplate">
-    <h2><%= title %></h2>
-    <h3><em><%= author %></em></h3>
+  <script id="postTemplate" type="text/template">
+    <h2 class="post-title"><%= title %></h2>
+    <h3>Author: <em><%= author %></em></h3>
     <p><%= content %></p>
-  </div>
+  </script>
 
 </body>
 </html>
