@@ -22,7 +22,7 @@ var posts = new Posts([
     content: 'Something About Mary'
   }),
   new Post({
-    title: 'Review of Gourmet Hotdogs',
+    title: 'Review of Gourmet Hotdogs and Fish Fingers',
     content: 'Something about condiments'
   })
 ]);
@@ -33,10 +33,34 @@ var AppView = Backbone.View.extend({
   render: function () {
     this.$el.html('<ul id="posts"></ul>');
     this.collection.each(function (p) {
-      var title = p.get('title');
-      var $li = $('<li/>').text( title ); // FIX THIS: Seperate our concerns
-      $li.appendTo('#posts');
+      var postList = new PostListView({model: p});
+      postList.render();
     });
+  }
+});
+
+var PostListView = Backbone.View.extend({
+  tagName: 'li', // Backbone will create a <li/> for us
+  events: {
+    'click': 'showPost'
+  },
+  showPost: function () {
+    var postView = new PostView({model: this.model});
+    postView.render();
+  },
+  render: function () {
+    this.$el.text( this.model.get('title') );
+    this.$el.appendTo('#posts');
+  }
+});
+
+var PostView = Backbone.View.extend({
+  el: '#main',
+  render: function () {
+    var postTemplate = $('#postTemplate').html();
+    var postHTML = _.template(postTemplate);
+
+    this.$el.html( postHTML(this.model.toJSON()) );
   }
 });
 
