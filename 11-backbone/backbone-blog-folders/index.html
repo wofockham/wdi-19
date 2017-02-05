@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backbone Blog</title>
+  <script src="js/jquery.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/backbone.js"></script>
+  <script src="js/models/Post.js"></script>
+  <script src="js/collections/Posts.js"></script>
+  <script src="js/views/AppView.js"></script>
+  <script src="js/views/PostListView.js"></script>
+  <script src="js/views/PostView.js"></script>
+  <script src="js/routers/Router.js"></script>
+  <script src="js/blog.js"></script>
+</head>
+<body>
+
+  <a href="#">Home</a>
+
+  <h1>My Backbone Blog</h1>
+
+  <div id="main"></div>
+
+  <script id="postTemplate" type="text/template">
+    <h2 class="post-title"><%= title %></h2>
+    <h3>Author: <em><%= author %></em></h3>
+    <p><%= content %></p>
+  </script>
+
+</body>
+</html>
