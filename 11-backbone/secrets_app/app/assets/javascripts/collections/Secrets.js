@@ -6,7 +6,8 @@ app.Secrets = Backbone.Collection.extend({
   initialize: function () {
     // Self rendering secrets
     this.on('add', function (s) {
-      // Render the new secret
+      var secretView = new app.SecretView({model: s});
+      secretView.render();
     });
   }
 })
