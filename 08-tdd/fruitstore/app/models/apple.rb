@@ -1,4 +1,4 @@
-class Fruit < ActiveRecord::Base
+class Apple < Fruit
   def squishy?
     false
   end
