@@ -55,6 +55,36 @@
         null,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/inceptor/Projects/wdi-19/08-tdd/fruitstore/spec/rails_helper.rb": [
@@ -340,6 +370,6 @@
         null
       ]
     },
-    "timestamp": 1487727919
+    "timestamp": 1487733773
   }
 }
