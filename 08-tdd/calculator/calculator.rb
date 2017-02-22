@@ -11,4 +11,8 @@ class Calculator
     # @input.inject { |acc, n| acc + n }
     @input.inject(&:+)
   end
+
+  def subtract
+    @input.inject(&:-)
+  end
 end
