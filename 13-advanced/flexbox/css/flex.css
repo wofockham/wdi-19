@@ -1,0 +1,40 @@
+.platform {
+  min-height: 20em;
+  background-color: pink;
+  border-radius: 0.5em;
+  margin: 1em auto;
+  display: flex; /* Children will use flex layout rules. */
+}
+
+.direction-row {
+  flex-direction: row-reverse; /* Also just row */
+}
+
+.direction-column {
+  flex-direction: column-reverse; /* Also just column */
+}
+
+.justify-flex-end {
+  justify-content: flex-end; /* flex-start is the default */
+}
+
+.justify-flex-center {
+  justify-content: center;
+}
+
+.justify-flex-space-between {
+  justify-content: space-between;
+}
+
+.justify-flex-space-around {
+  justify-content: space-around;
+}
+
+.box {
+  background-color: white;
+  text-align: center;
+  width: 15em;
+  height: 15em;
+  border-radius: 0.5em;
+  line-height: 15em;
+}
