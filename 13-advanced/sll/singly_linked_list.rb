@@ -1,4 +1,7 @@
 class SinglyLinkedList
+
+  include Enumerable # Mixin
+
   attr_accessor :head
 
   def initialize(value=nil)
@@ -44,6 +47,11 @@ class SinglyLinkedList
 
   # Tricky
   def each # Takes a block
+    node = @head
+    while node
+      yield node.value # In JS we'd say this "executes the callback"
+      node = node.next
+    end
   end
 
   # Also: .map, .inject, etc
@@ -64,5 +72,5 @@ bros = SinglyLinkedList.new 'Chico'
 bros.prepend 'Harpo'
 bros.prepend 'Groucho'
 
-# require 'pry'
-# binding.pry
+require 'pry'
+binding.pry
