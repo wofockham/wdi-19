@@ -1,0 +1,12 @@
+%h1.title#title HAML Demo
+
+%h2= Random.rand
+
+%div.container
+  %p Here is a demo of some HAML features.
+
+%h2 this breaks everything
+
+%ul
+  - %w{ Groucho Harpo Chico }.each do |brother|
+    %li= brother
